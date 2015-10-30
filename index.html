@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Can I Still Hire a Former PMN'er?</title>
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta name="description" content="How many former PMN'ers are still on the job market?">
+  	<meta name="author" content="Philadelphia Media Network">
+
+  	<link href='http://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
+
+  	<style>
+  		h1 { font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 2.5em; text-align: center; }
+  		h2 { font-family: 'Roboto', sans-serif; font-weight: 400; font-size: 1em; text-align: center; max-width: 640px; margin-left: auto; margin-right: auto; color: #333; }
+  		h3 { font-family: 'Roboto', sans-serif; font-weight: 900; font-size: 2em; text-align: center; }
+  		.bolt {  text-align: center; }
+  		#answer { font-family: 'Roboto', sans-serif; font-weight: 900; font-size: 100px; text-align: center; margin: -30px 0 0px 0; color: #B63321; }
+  		#themeter { }
+  	</style>
+
+</head>
+
+<body>
+	<h1>Can I still hire a former PMN'er?</h1>
+	<div id="answer">YES</div>
+
+	<div style="width: 210px; height: 300px; margin-left: auto; margin-right:
+auto;">
+		<svg xmlns="http://www.w3.org/2000/svg" height="350" width="210">
+		<linearGradient id="lg" x1="0.5" y1="1" x2="0.5" y2="0">
+			<stop offset="0%" stop-opacity="1" stop-color="#B63321"/>
+      <stop id="the-meter-step-1" offset="100" stop-opacity="1" stop-color="#B63321"/>
+      <stop id="the-meter-step-2" offset="100" stop-opacity="0" stop-color="#B63321"/>
+      <stop offset="100%" stop-opacity="0" stop-color="#B63321"/>
+		</linearGradient>
+		<circle cx="105" cy="175" r="100" fill="url(#lg)" />
+		</svg>
+	</div>
+
+	<h3 id="percDisp"> </h3>
+	<h2>TK TK TK TK</h2>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+
+		var jobs =  1;
+
+		var total = 48;
+		var perc = jobs/total * 100;
+		$("#percDisp").text((100-Math.ceil(( perc ))) + "% are still on the market")
+		$("#the-meter-step-1").attr("offset", (100 - perc ) + '%' );
+		$("#the-meter-step-2").attr("offset", (100 - perc ) + '%' );
+
+		if (jobs == total) {
+			$("#answer").text("NO");
+		}
+
+
+	</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-67398339-3', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
