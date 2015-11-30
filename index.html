@@ -32,6 +32,7 @@
   		.bio {
   			vertical-align: top;
   			padding-right: 5px;
+  			position: relative;
   		}
   		.button-twitter {
             background: rgb(0, 172, 237); /* this is a light blue */
@@ -53,6 +54,15 @@
 		    .hide-on-mobile {
 		        display: none;
 		    }
+		}
+		.hired {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 100;
+			background-image: url( 'img/hired.png' );
+			background-repeat: no-repeat;
+   			background-position: center; 
 		}
   	</style>
 
@@ -90,6 +100,8 @@ auto;">
 	<table>
 	  <tr>
 	    <th class="bio">
+			<div class="hired"></div>
+
 	    	<h3 class="name">Stephanie Aaronson</h3>
 			<h4>Battle-tested photographer & versatile multimedia producer</h4>
 			<a class="pure-button button-xsmall" href="mailto:steph.aaronson@gmail.com">
@@ -405,7 +417,7 @@ auto;">
 	</table>	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script>
-		var jobs = 1;
+		var jobs = 3;
 		var total = 48;
 		var perc = jobs/total * 100;
 		$("#percDisp").text((100-Math.ceil(( perc ))) + "% are still on the market")
